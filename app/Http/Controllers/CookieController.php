@@ -15,7 +15,9 @@ class CookieController extends Controller
      */
     public function index()
     {
-        //
+        $cookies = Cookie::all();
+
+        return view('cookies.index', compact('cookies'));
     }
 
     /**
@@ -25,7 +27,7 @@ class CookieController extends Controller
      */
     public function create()
     {
-        //
+        return view('cookies.create');
     }
 
     /**
@@ -58,7 +60,7 @@ class CookieController extends Controller
      */
     public function edit(Cookie $cookie)
     {
-        //
+        return view('cookies.show', compact('cookie'));
     }
 
     /**
